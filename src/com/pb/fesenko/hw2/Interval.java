@@ -8,6 +8,11 @@ public class Interval {
 
         System.out.println("Введіть будь-яке число:");
         int number = scan.nextInt();
+        int min = 0;
+        while (number<min)
+        {
+            System.out.println("Ваше число не попадає в жоден діапазон");
+        }
         if (number<=14) {
             System.out.println("Ваше число в межах [0-14]");
         }else if (number > 100) {

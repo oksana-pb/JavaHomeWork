@@ -19,8 +19,7 @@ public class Calculator {
         String sign = scan.nextLine();
         System.out.println("operand1 = " + operand1 + " operand2 = " + operand2 + "sign = " + sign);
 
-        int result = operand1 / operand2;
-        System.out.println("Результат:" + result);
+
 
         switch (sign) {
             case "+":
@@ -32,25 +31,15 @@ public class Calculator {
             case "*":
                 System.out.println(+(operand1 * operand2));
                 break;
-            case "/":
-                if(operand2 == 0) {
-                    throw new IllegalArgumentException("Ділити нв нуль не можна!");
-                }
+            case "/": {
+                if (operand2 == 0)
+                    System.out.println("Ділити на нуль не можна");
+            }
+            {if (operand2 != 0)
+                System.out.println(+(operand1 / operand2));
+        }
 
-                    System.out.println(+(operand1 / operand2));
-
-                    break;
-                }
+                break;
         }
     }
-
-
-
-
-
-
-
-
-
-
-
+}
